@@ -25,3 +25,4 @@ dist-ssr
 
 # Prevent Figma files from being tracked by Git.
 *.fig
+designs
