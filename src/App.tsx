@@ -1,5 +1,7 @@
+import React from "react"
 import './App.css'
 import { RiIndeterminateCircleLine } from "@remixicon/react"
+import { ACCORDION_CONTENT } from "@/data/content"
 
 function App() {
 
@@ -12,16 +14,26 @@ function App() {
             <p className="text-lg/4.5 md:text-xl/4 text-neutral-600">Get all your questions answered</p>
           </div>
           
-          <div className="space-y-7">
-            <div className="flex gap-x-4">
-              <div className="space-y-2">
-                <p className="text-lg/4.5 font-medium">What types of images are available on your platform?</p>
-                <p className="text-base/4 text-neutral-600 text-left">
-                  Our platform offers a diverse range of abstract images to suit various preferences and needs. From vibrant geometric patterns to soothing landscapes, we strive to provide a wide selection to cater to different tastes.
-                </p>
-              </div>
-              <RiIndeterminateCircleLine className="text-neutral-400 w-6 h-6" />
-            </div>
+          <div className="space-y-3.5 divide-y divide-neutral-400">
+            {
+              ACCORDION_CONTENT.map(accordion => {
+                return (
+                  <React.Fragment key={accordion.title}>
+                    <div className="flex gap-x-4 pb-3.5">
+                      <div className="space-y-2">
+                        <p className="text-lg/4.5 font-medium">{accordion.title}</p>
+                        <p className="text-base/4 text-neutral-600 text-left">
+                          {accordion.description}
+                        </p>
+                      </div>
+                      <div>
+                        <RiIndeterminateCircleLine className="text-neutral-400 w-6 h-6"/>
+                      </div>
+                    </div>
+                  </React.Fragment>
+                )
+              })
+            }
           </div>
         </div>
       </div>
