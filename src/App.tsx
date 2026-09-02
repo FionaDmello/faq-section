@@ -14,12 +14,12 @@ function App() {
             <p className="text-lg/4.5 md:text-xl/4 text-neutral-600">Get all your questions answered</p>
           </div>
           
-          <div className="space-y-7 divide-y divide-neutral-400 nth-5:border-0">
+          <div className="space-y-7 divide-y divide-neutral-400">
             {
               ACCORDION_CONTENT.map(accordion => {
                 return (
                   <React.Fragment key={accordion.title} >
-                    <div className="flex gap-x-4 pb-7 ">
+                    <div className="flex gap-x-4 pb-7 nth-6:pb-0 nth-6:border-0">
                       <div className="space-y-2">
                         <p className="text-lg/4.5 font-medium">{accordion.title}</p>
                         <p className="text-base/4 text-neutral-600 text-left">
@@ -34,14 +34,19 @@ function App() {
                 )
               })
             }
-            <div className="border-2 border-neutral-400 shadow-md rounded-lg p-4 space-y-4">
-              <div>
-                <h1>Can't find the answer you're looking for?</h1>
-                <p>Reach out to our <a>customer support</a> team</p>
+            <div className="border-2 border-neutral-200 shadow-md rounded-lg p-4 space-y-4 flex flex-col">
+              <div className="space-y-2">
+                <h4 className="text-2xl font-semibold text-left">Can't find the answer you're looking for?</h4>
+                <p className="text-base text-neutral-600">
+                  Reach out to our <span><a className="text-indigo-700  hover:text-indigo-800 focus:outline-4 focus:outline-offset-1 focus:outline-indigo-200 disabled:text-neutral-400 rounded">customer support</a></span> team.
+                </p>
               </div>
-              <button>Get in touch</button>
+              <button className="space-x-1.5 px-5 py-3 bg-indigo-700 text-white text-center shadow rounded hover:bg-indigo-800 focus:outline-4 focus:outline-solid focus:outline-indigo-200 disabled:bg-neutral-100 disabled:text-neutral-400">
+                Get in touch
+              </button>
             </div>
           </div>
+          
         </div>
       </div>
       
