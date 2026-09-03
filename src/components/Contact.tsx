@@ -4,7 +4,7 @@ const ContactCard = () => {
       <div className="space-y-2">
         <h4 className="text-xl font-semibold text-left">Can't find the answer you're looking for?</h4>
         <p className="text-base text-neutral-600">
-          Reach out to our <span><a className="text-indigo-700  hover:text-indigo-800 focus:outline-4 focus:outline-offset-1 focus:outline-indigo-200 disabled:text-neutral-400 rounded">customer support</a></span> team.
+          Reach out to our <span><a href="" className="text-indigo-700  hover:text-indigo-800 focus:outline-4 focus:outline-offset-1 focus:outline-indigo-200 disabled:text-neutral-400 rounded cursor-pointer">customer support</a></span> team.
         </p>
       </div>
       <button className="space-x-1.5 px-5 py-3 bg-indigo-700 text-white text-center shadow rounded hover:bg-indigo-800 focus:outline-4 focus:outline-solid focus:outline-indigo-200 disabled:bg-neutral-100 disabled:text-neutral-400">

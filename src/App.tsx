@@ -12,7 +12,7 @@ function App() {
       <div className="flex-1 rounded md:rounded-1.5 bg-white shadow gap-2 px-4 py-12 md:py-16 lg:p-24 items-center">
         <div className="space-y-12 md:space-y-16">
           <Header />
-          <div className="space-y-7 divide-y divide-neutral-400">
+          <div className="flex flex-col gap-y-7 divide-y divide-neutral-400">
             {
               ACCORDION_CONTENT.map(accordion => <Accordion accordion={accordion} />)
             }
