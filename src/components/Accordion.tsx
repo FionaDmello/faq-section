@@ -1,4 +1,4 @@
-import React, { useId, useState } from "react"
+import { useId, useState } from "react"
 import { RiIndeterminateCircleLine, RiAddCircleLine } from "@remixicon/react"
 
 interface AccordionProps {
@@ -7,7 +7,6 @@ interface AccordionProps {
     description: string
   }
 }
-
 const Accordion = ({ accordion }: AccordionProps) => {
   const instanceId = useId()
   const { title, description } = accordion
