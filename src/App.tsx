@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="bg-linear-to-br from-[#F9FAFB] to-[#D2D6DB] min-h-screen flex flex-col p-4">
-      <div className="flex-1 rounded md:rounded-1.5 bg-white shadow gap-2 px-4 py-12 md:py-16 items-center">
+      <div className="flex-1 rounded md:rounded-1.5 bg-white shadow gap-2 px-4 py-12 md:py-16 lg:p-24 items-center">
         <div className="space-y-12 md:space-y-16">
           <div className="space-y-5 text-center">
             <h1 className="text-3xl/7.5 md:text-5xl/12 font-semibold">Frequently asked questions</h1>
@@ -19,7 +19,7 @@ function App() {
               ACCORDION_CONTENT.map(accordion => {
                 return (
                   <React.Fragment key={accordion.title} >
-                    <div className="flex gap-x-4 pb-7 nth-6:pb-0 nth-6:border-0">
+                    <div className="flex gap-x-4 pb-7 nth-6:pb-0 nth-6:border-0 justify-between">
                       <div className="space-y-2">
                         <p className="text-lg/4.5 font-medium">{accordion.title}</p>
                         <p className="text-base/4 text-neutral-600 text-left">
